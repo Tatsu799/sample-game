@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 100px;
+}
+
+body {
+  line-height: 2;
+  letter-spacing: 2px;
+  word-break: break-all;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10%;
+
+  &__boxImage {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3% auto;
+    .name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__boxButton {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 8% 20% 0 20%;
+  }
+
+  &__textBox {
+    text-align: center;
+    margin: 2% 0 0 0;
+  }
+}
+
+.nextText {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  outline: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  // -webkit-text-stroke: 1px #000;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
+  &:hover {
+    letter-spacing: 0.12em;
+    text-indent: 0.12em;
+    font-size: 1.8rem;
+  }
+  span {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+  }
+}
+
+.btn-blue {
+  background-color: rgb(68, 153, 225);
+}
+
+.btn-red {
+  background-color: rgb(212, 46, 38);
+}
+
+.btn-yellow {	
+  background-color: rgb(253, 243, 81);
+}
+
+.container__textBox {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.result-lose {
+  color: rgb(212, 46, 38);
+}
+
+
+.result-win {
+  color: rgb(68, 153, 225);
+}
