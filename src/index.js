@@ -3,7 +3,7 @@ function handleClick(playerHands) {
   const playerHandsList = ['グー', 'チョキ', 'パー'];
   const randomNumForHand = Math.floor(Math.random() * 3);
 
-  //勝ち負けの判定
+  //勝ち負けの判定 例えばこの部分を考えてもらうとか？
   if (randomNumForHand === playerHands) {
     result = 'あいこで....';
   } else if (playerHands === 0 && randomNumForHand === 1) {
@@ -21,8 +21,7 @@ function handleClick(playerHands) {
   firstText.style.display = 'none';
   document.getElementById('computer').src = './images/hand_' + randomNumForHand + '.png';
   document.getElementById('player').src = './images/hand_' + playerHands + '.png';
-  document.getElementById('resultComputer').innerHTML =
-    playerHandsList[playerHands] + 'を選択しました。ジャンケンの結果は・・・？';
+  document.getElementById('resultComputer').innerHTML = '【' + playerHandsList[playerHands] + '】' + 'ジャンケンの結果は・・・？';
   window.setTimeout(() => {
     document.getElementById('resultText').innerHTML = '相手は' + '【' + computerHandsList[randomNumForHand] + '】';
     window.setTimeout(() => {
